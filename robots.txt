@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://runasand.github.com/sitemap.xml 
