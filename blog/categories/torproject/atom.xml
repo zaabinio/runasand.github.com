@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[blog.encrypted.cc]]></title>
-  <link href="http://blog.encrypted.cc/atom.xml" rel="self"/>
+  <title><![CDATA[Category: torproject | blog.encrypted.cc]]></title>
+  <link href="http://blog.encrypted.cc/blog/categories/torproject/atom.xml" rel="self"/>
   <link href="http://blog.encrypted.cc/"/>
   <updated>2013-02-02T17:50:02-05:00</updated>
   <id>http://blog.encrypted.cc/</id>
@@ -30,7 +30,7 @@ re-posting this status update here would be a good way to start my blog.</p>
 <li><p>I interviewed 26 candidates for the <a href="https://www.torproject.org/about/jobs-translatorsupport.html.en">translator/support assistant position(s)</a>. All the interviews were done via email and I spent a lot of time reviewing the answers I received. I hope we can move forward and hire support assistants in February.</p></li>
 <li><p>I gave a talk about Tor and the Arab Spring at <a href="http://www.hacdc.org/">HacDC</a>. I met with researchers in DC and listened to talks about privacy, stylometry, analysis of onion routing security, and an evaluation of relay
 selection in Tor. I attended a meeting with the US Drug Enforcement Agency (DEA) where Andrew talked about all things Tor. I traveled to London and Istanbul (trip reports will be published on Monday).</p></li>
-<li><p>I resolved 204 tickets in the Tor help desk system (see the <a href="https://lists.torproject.org/pipermail/tor-reports/2013-February/000148.html">tor-reports email</a> for the full summary). I&#8217;d like to thank Moritz for taking care of the help desk while I was traveling.</p></li>
+<li><p>I resolved 204 tickets in the Tor help desk system (see the <a href="https://lists.torproject.org/pipermail/tor-reports/2013-February/000148.html">tor-reports email</a> for the full summary). I'd like to thank Moritz for taking care of the help desk while I was traveling.</p></li>
 </ul>
 
 
