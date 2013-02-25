@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Meeting with SOCA in London - blog.encrypted.cc</title>
+  <title>Testing Tor Hidden Services with Burp Pro - blog.encrypted.cc</title>
   <meta name="author" content="Runa A. Sandvik">
 
   
-  <meta name="description" content="In January I met with the Serious Organised Crime Agency (SOCA) in London, UK. One of the challenges when dealing with online threats (cybercrime/e- &hellip;">
+  <meta name="description" content="On February 15, Dafydd Stuttard announced the release of Burp Suite v1.5.05. This release contains a number of feature enhancements and bugfixes, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.encrypted.cc/blog/2013/02/04/meeting-with-soca-in-london/">
+  <link rel="canonical" href="http://blog.encrypted.cc/blog/2013/02/25/testing-tor-hidden-services-with-burp-pro/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -59,7 +59,7 @@
   
   <header>
     
-      <h1 class="entry-title">Meeting With SOCA in London</h1>
+      <h1 class="entry-title">Testing Tor Hidden Services With Burp Pro</h1>
     
     
       <p class="meta">
@@ -75,18 +75,38 @@
   
 
 
-<time datetime="2013-02-04T09:16:00-05:00" pubdate data-updated="true">Feb 4<span>th</span>, 2013</time>
+<time datetime="2013-02-25T09:33:00-05:00" pubdate data-updated="true">Feb 25<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>In January I met with the <a href="http://www.soca.gov.uk/">Serious Organised Crime Agency (SOCA)</a> in London, UK. One of the challenges when dealing with online threats (cybercrime/e-crime) is understanding which leads not to follow. My goal was to help them understand what Tor is, how it works (both from a user and a relay operator point of view), and what it can and cannot do.</p>
+<div class="entry-content"><p>On February 15, Dafydd Stuttard announced the release of <a href="http://releases.portswigger.net/2013/02/v1505.html">Burp Suite v1.5.05</a>. This release contains a number of feature enhancements and bugfixes, including an extension to the SOCKS proxy support which allows users to specify that all DNS lookups should be done remotely via the proxy. This means that it is possible to test Tor hidden services with Burp.</p>
 
-<p>I talked about the Tor software ecosystem, including <a href="https://metrics.torproject.org/exonerator.html">ExoneraTor</a> (the website that tells you whether a given IP address was a Tor relay), and mentioned that we list all <a href="https://www.torproject.org/projects/projects.html.en">official projects</a> on our website. I also mentioned Roger&#8217;s trip to the <a href="https://blog.torproject.org/blog/trip-report-october-fbi-conference">FBI conference</a> in October 2012, and talked about some of the experiences we have had teaching US-based law enforcement about Tor.</p>
+<p>This feature is currently only available in Burp Pro, but should eventually make its way into the free edition.</p>
 
-<p>Overall, I would say the meeting went well. They learned more about Tor and the projects we are working on, and they are aware that the protections that prevent us from figuring out what Tor users are doing - and who they are - is what&#8217;s keeping all Tor users safe.</p>
+<h3>Tor hidden services</h3>
+
+<p><a href="https://www.torproject.org/docs/hidden-services.html.en">Tor hidden services</a>, sometimes also referred to as the <em>hidden web</em>, <em>dark web</em>, and <em>deep web</em>, were deployed on the Tor network in 2004. Hidden services allow users to host various kinds of resources, such as websites and instant messaging servers, without having their identity or location revealed. Not only does this protect the operators, but also the resources.</p>
+
+<p>A hidden service can only be accessed through its Tor-specific <em>.onion</em> pseudo-<em>top-level domain (TLD)</em>. One example is <a href="http://3g2upl4pq6kufc4m.onion/">3g2upl4pq6kufc4m.onion</a>, which is the address of the <a href="https://duckduckgo.com/">Duck Duck Go</a> search engine. The relays in the Tor network understand the .onion pseudo-TLD and route data anonymously both to and from the hidden service. The IP address, physical location, or operator of a Tor hidden service is never revealed to relays in the Tor network, visitors, or the Tor Project &#8211; as long as the hidden service has been properly <a href="https://www.torproject.org/docs/tor-hidden-service.html.en">configured and secured</a>.</p>
+
+<h3>Tor hidden services and Burp</h3>
+
+<p>To test a Tor hidden service with Burp, make sure the Tor Browser, Tor, and Burp can all talk to each other:</p>
+
+<ul>
+<li>Download the <a href="https://www.torproject.org/download/download-easy.html.en">Tor Browser Bundle</a>, <a href="https://www.torproject.org/docs/verifying-signatures.html.en">verify the signature</a>, and get it up and running</li>
+<li>Figure out which SOCKS port the Tor Browser is using to talk to Tor: <em>Preferences</em>, <em>Advanced</em>, <em>Network</em>, <em>Settings</em> (next to <em>Configure how TorBrowser connects to the Internet</em>)</li>
+<li>Configure Burp to use the same SOCKS proxy as the Tor Browser: <em>Options</em>, <em>Connections</em>, scroll down to the SOCKS proxy section, enter the host and port, and tick <em>Use SOCKS proxy</em> and <em>Do DNS lookups over SOCKS proxy</em></li>
+<li>Configure the Tor Browser to use Burp as an HTTP Proxy: on the proxy settings page, enter <em>127.0.0.1:8080</em> as the HTTP proxy and tick <em>Use this proxy for all server protocols</em></li>
+</ul>
+
+
+<p>Visiting <a href="http://3g2upl4pq6kufc4m.onion/">3g2upl4pq6kufc4m.onion</a> in the Tor Browser gives the following output in Burp:</p>
+
+<p><img src="/images/burp-tor-hs.png"></p>
 </div>
 
 
@@ -109,12 +129,12 @@
   
 
 
-<time datetime="2013-02-04T09:16:00-05:00" pubdate data-updated="true">Feb 4<span>th</span>, 2013</time>
+<time datetime="2013-02-25T09:33:00-05:00" pubdate data-updated="true">Feb 25<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/torproject/'>torproject</a>
+    <a class='category' href='/blog/categories/security/'>security</a>
   
 </span>
 
@@ -130,10 +150,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/02/02/what-i-did-for-the-tor-project-in-january/" title="Previous Post: What I did for the Tor Project in January">&laquo; What I did for the Tor Project in January</a>
+        <a class="basic-alignment left" href="/blog/2013/02/04/training-journalists-in-istanbul/" title="Previous Post: Training journalists in Istanbul">&laquo; Training journalists in Istanbul</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/02/04/training-journalists-in-istanbul/" title="Next Post: Training journalists in Istanbul">Training journalists in Istanbul &raquo;</a>
       
     </p>
   </footer>
@@ -220,8 +238,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.encrypted.cc/blog/2013/02/04/meeting-with-soca-in-london/';
-        var disqus_url = 'http://blog.encrypted.cc/blog/2013/02/04/meeting-with-soca-in-london/';
+        var disqus_identifier = 'http://blog.encrypted.cc/blog/2013/02/25/testing-tor-hidden-services-with-burp-pro/';
+        var disqus_url = 'http://blog.encrypted.cc/blog/2013/02/25/testing-tor-hidden-services-with-burp-pro/';
         var disqus_script = 'embed.js';
       
     (function () {

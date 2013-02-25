@@ -15,16 +15,22 @@
         <lastmod>2013-02-04T10:03:41-05:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://blog.encrypted.cc/blog/2013/02/25/testing-tor-hidden-services-with-burp-pro/
+        </loc>
+        <lastmod>2013-02-25T10:37:51-05:00</lastmod>
+    </url>
+    <url>
         <loc>http://blog.encrypted.cc/blog/archives/</loc>
-        <lastmod>2013-02-04T10:03:41-05:00</lastmod>
+        <lastmod>2013-02-25T10:37:51-05:00</lastmod>
     </url>
     <url>
         <loc>http://blog.encrypted.cc/archives/</loc>
-        <lastmod>2013-02-04T10:03:41-05:00</lastmod>
+        <lastmod>2013-02-25T10:37:51-05:00</lastmod>
     </url>
     <url>
         <loc>http://blog.encrypted.cc/</loc>
-        <lastmod>2013-02-04T10:03:41-05:00</lastmod>
+        <lastmod>2013-02-25T10:37:51-05:00</lastmod>
     </url>
     <url>
         <loc>http://blog.encrypted.cc/robots.txt</loc>
