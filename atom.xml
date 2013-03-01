@@ -4,7 +4,7 @@
   <title><![CDATA[blog.encrypted.cc]]></title>
   <link href="http://blog.encrypted.cc/atom.xml" rel="self"/>
   <link href="http://blog.encrypted.cc/"/>
-  <updated>2013-03-01T10:35:47-05:00</updated>
+  <updated>2013-03-01T10:40:50-05:00</updated>
   <id>http://blog.encrypted.cc/</id>
   <author>
     <name><![CDATA[Runa A. Sandvik]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Little Printer Auth Bypass (CVE-2013-1791)]]></title>
-    <link href="http://blog.encrypted.cc/blog/2013/03/01/little-printer-auth-bypass-cve-2013-1791/"/>
+    <title type="html"><![CDATA[Little Printer Auth Bypass]]></title>
+    <link href="http://blog.encrypted.cc/blog/2013/03/01/little-printer-auth-bypass/"/>
     <updated>2013-03-01T10:29:00-05:00</updated>
-    <id>http://blog.encrypted.cc/blog/2013/03/01/little-printer-auth-bypass-cve-2013-1791</id>
+    <id>http://blog.encrypted.cc/blog/2013/03/01/little-printer-auth-bypass</id>
     <content type="html"><![CDATA[<p>The <a href="http://bergcloud.com/littleprinter/">Little Printer</a>, created by
 <a href="http://berglondon.com/">BERG</a>, holds a compact, inkless, thermal
 printer and prints messages filled with things like your schedule,
