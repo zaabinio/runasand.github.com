@@ -4,7 +4,7 @@
   <title><![CDATA[blog.encrypted.cc]]></title>
   <link href="http://blog.encrypted.cc/atom.xml" rel="self"/>
   <link href="http://blog.encrypted.cc/"/>
-  <updated>2013-03-01T09:06:17-05:00</updated>
+  <updated>2013-03-01T10:22:41-05:00</updated>
   <id>http://blog.encrypted.cc/</id>
   <author>
     <name><![CDATA[Runa A. Sandvik]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Little Printer Auth Bypass (CVE-2013-1791)]]></title>
+    <link href="http://blog.encrypted.cc/blog/2013/03/01/little-printer-auth-bypass-cve-2013-1791/"/>
+    <updated>2013-03-01T10:21:00-05:00</updated>
+    <id>http://blog.encrypted.cc/blog/2013/03/01/little-printer-auth-bypass-cve-2013-1791</id>
+    <content type="html"><![CDATA[<p>The <a href="http://bergcloud.com/littleprinter/">Little Printer</a>, created by
+<a href="http://berglondon.com/">BERG</a>, holds a compact, inkless, thermal
+printer and prints messages filled with things like your schedule,
+tweets, news headlines and friends’ birthdays.</p>
+
+<p><img class="center" src="images/littleprinter.jpg"></p>
+
+<p>The website <a href="http://remote.bergcloud.com/">remote.bergcloud.com</a> is used
+to communicate with the Little Printer; set up print subscriptions, send
+messages to the printer, give friends permission to send messages, and
+so on. I discovered an authentication/authorization bypass issue on this
+site which allows an owner of a Little Printer, as well as any user who
+has been authorized to print messages to at least one Little Printer, to
+print messages to any of the Little Printers out there &#8211; without prior
+authorization from the owners.</p>
+
+<p>The HTTP POST which is sent when you message the Little Printer contains
+the following payload:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>utf8=%E2%9C%93&authenticity_token=TOKEN&message%5Bbot_id%5D=ID \
+</span><span class='line'>&message%5Bstyle%5D=1&message%5Bmessage%5D=Hello!</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The field <strong>message[bot_id]</strong> contains the ID of the Little Printer,
+which is a sequential numeric identifier. Changing the ID allows a user
+to send a message to another Little Printer without being authorized by
+the owner. The user is also able to print messages without
+<strong>authenticity_token</strong> present in the payload.</p>
+
+<p>After printing a message, the site will normally display a box saying
+<em>Message sent</em>. When printing to another Little Printer, without really
+having permission to do so, the site displays an error and it seems like
+printing was not successful. However, that&#8217;s not the case.</p>
+
+<p>I reported this issue directly to Nick Ludlam, the CTO at BERG,
+yesterday. He replied an hour later saying that the issue had been
+patched on the live system. More information about this can be found in
+BERG&#8217;s <a href="http://bergcloud.com/2013/03/01/berg-cloud-security-announcement/">security announcement</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What I did for the Tor Project in February]]></title>
