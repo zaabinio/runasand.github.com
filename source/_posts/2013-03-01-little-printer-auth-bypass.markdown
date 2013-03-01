@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Little Printer Auth Bypass (CVE-2013-1791)"
+title: "Little Printer Auth Bypass"
 date: 2013-03-01 10:29
 comments: true
 categories: security 
