@@ -4,7 +4,7 @@
   <title><![CDATA[blog.encrypted.cc]]></title>
   <link href="http://blog.encrypted.cc/atom.xml" rel="self"/>
   <link href="http://blog.encrypted.cc/"/>
-  <updated>2013-02-25T10:38:58-05:00</updated>
+  <updated>2013-03-01T09:06:17-05:00</updated>
   <id>http://blog.encrypted.cc/</id>
   <author>
     <name><![CDATA[Runa A. Sandvik]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[What I did for the Tor Project in February]]></title>
+    <link href="http://blog.encrypted.cc/blog/2013/03/01/what-i-did-for-the-tor-project-in-february/"/>
+    <updated>2013-03-01T08:11:00-05:00</updated>
+    <id>http://blog.encrypted.cc/blog/2013/03/01/what-i-did-for-the-tor-project-in-february</id>
+    <content type="html"><![CDATA[<h3>Top 5 things I did this month</h3>
+
+<ul>
+<li><p>Started working on a forensic analysis of the Tor Browser Bundle, looked at tools such as <a href="http://developer.apple.com/library/mac/#documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/Introduction/Introduction.html">Instruments</a> for OS X, and <a href="http://technet.microsoft.com/en-us/sysinternals/bb896645.aspx">Process Monitor</a>, <a href="https://code.google.com/p/regshot/">Regshot</a>, <a href="http://processhacker.sourceforge.net/">Process Hacker</a>, and <a href="https://www.honeynet.org/node/315">Capture BAT</a> for Windows. I believe I will also have to take differences in drives (solid state drive, hard disk drive, virtual hard disk) into account when doing this analysis. I also added a forensic analysis of the Tor Browser Bundle on Linux <a href="https://trac.torproject.org/projects/tor/ticket/8166">(#8166)</a> to the list.</p></li>
+<li><p>Started working on an improved version of the <a href="https://www.torproject.org/docs/short-user-manual.html.en">short user manual</a> (<a href="https://trac.torproject.org/projects/tor/ticket/5571">#5571</a>, <a href="https://trac.torproject.org/projects/tor/ticket/5811">#5811</a>, <a href="https://trac.torproject.org/projects/tor/ticket/8003">#8003</a>), but figured I would wait until we have decided if we are going to rename obfsproxy/pyobfsproxy to something that is less technical and easier to pronounce.</p></li>
+<li><p>Updated a number of translations of the <a href="https://www.torproject.org/docs/short-user-manual.html.en">short user manual</a> and documented <a href="https://trac.torproject.org/projects/tor/wiki/doc/translation/Introduction">how the translation process works</a>.</p></li>
+<li><p>Hired new translators/support assistants and drafted a welcome email with information about the different systems, accounts, escalation process, and so on. I also put together a document explaining <a href="https://trac.torproject.org/projects/tor/wiki/doc/support/Introduction">how to work with our support system</a>.</p></li>
+<li><p>Resolved 94 tickets in the Tor help desk system (see the <a href="https://lists.torproject.org/pipermail/tor-reports/2013-March/000163.html">tor-reports email</a> for the full summary). Thanks to Moritz, again, for taking care of the help desk while I was traveling.</p></li>
+</ul>
+
+
+<h3>Top 5 things I would like to do next month</h3>
+
+<ul>
+<li><p>Continue with a forensic analysis of the Tor Browser Bundle.</p></li>
+<li><p>Get our new translators/support assistants started with <a href="https://www.transifex.com/projects/p/torproject/">Transifex</a> and <a href="http://www.bestpractical.com/rt/">RT</a>.</p></li>
+<li><p>Decide on a new name for obfsproxy/pyobfsproxy, and update the <a href="https://www.torproject.org/docs/short-user-manual.html.en">short user manual</a> and other documentation.</p></li>
+<li><p>Continue working on an OS X Flash sandbox for the Tor Browser Bundle (<a href="https://trac.torproject.org/projects/tor/ticket/7008">#7008</a>).</p></li>
+<li><p>Travel for conferences, meetings, and other events. In March, I will be in London, Copenhagen, Boston, and Washington DC.</p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Testing Tor Hidden Services with Burp Pro]]></title>

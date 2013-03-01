@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Meeting with SOCA in London - blog.encrypted.cc</title>
+  <title>What I did for the Tor Project in February - blog.encrypted.cc</title>
   <meta name="author" content="Runa A. Sandvik">
 
   
-  <meta name="description" content="In January I met with the Serious Organised Crime Agency (SOCA) in London, UK. One of the challenges when dealing with online threats (cybercrime/e- &hellip;">
+  <meta name="description" content="Top 5 things I did this month Started working on a forensic analysis of the Tor Browser Bundle, looked at tools such as Instruments for OS X, and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.encrypted.cc/blog/2013/02/04/meeting-with-soca-in-london/">
+  <link rel="canonical" href="http://blog.encrypted.cc/blog/2013/03/01/what-i-did-for-the-tor-project-in-february/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -59,7 +59,7 @@
   
   <header>
     
-      <h1 class="entry-title">Meeting With SOCA in London</h1>
+      <h1 class="entry-title">What I Did for the Tor Project in February</h1>
     
     
       <p class="meta">
@@ -75,18 +75,34 @@
   
 
 
-<time datetime="2013-02-04T09:16:00-05:00" pubdate data-updated="true">Feb 4<span>th</span>, 2013</time>
+<time datetime="2013-03-01T08:11:00-05:00" pubdate data-updated="true">Mar 1<span>st</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>In January I met with the <a href="http://www.soca.gov.uk/">Serious Organised Crime Agency (SOCA)</a> in London, UK. One of the challenges when dealing with online threats (cybercrime/e-crime) is understanding which leads not to follow. My goal was to help them understand what Tor is, how it works (both from a user and a relay operator point of view), and what it can and cannot do.</p>
+<div class="entry-content"><h3>Top 5 things I did this month</h3>
 
-<p>I talked about the Tor software ecosystem, including <a href="https://metrics.torproject.org/exonerator.html">ExoneraTor</a> (the website that tells you whether a given IP address was a Tor relay), and mentioned that we list all <a href="https://www.torproject.org/projects/projects.html.en">official projects</a> on our website. I also mentioned Roger&#8217;s trip to the <a href="https://blog.torproject.org/blog/trip-report-october-fbi-conference">FBI conference</a> in October 2012, and talked about some of the experiences we have had teaching US-based law enforcement about Tor.</p>
+<ul>
+<li><p>Started working on a forensic analysis of the Tor Browser Bundle, looked at tools such as <a href="http://developer.apple.com/library/mac/#documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/Introduction/Introduction.html">Instruments</a> for OS X, and <a href="http://technet.microsoft.com/en-us/sysinternals/bb896645.aspx">Process Monitor</a>, <a href="https://code.google.com/p/regshot/">Regshot</a>, <a href="http://processhacker.sourceforge.net/">Process Hacker</a>, and <a href="https://www.honeynet.org/node/315">Capture BAT</a> for Windows. I believe I will also have to take differences in drives (solid state drive, hard disk drive, virtual hard disk) into account when doing this analysis. I also added a forensic analysis of the Tor Browser Bundle on Linux <a href="https://trac.torproject.org/projects/tor/ticket/8166">(#8166)</a> to the list.</p></li>
+<li><p>Started working on an improved version of the <a href="https://www.torproject.org/docs/short-user-manual.html.en">short user manual</a> (<a href="https://trac.torproject.org/projects/tor/ticket/5571">#5571</a>, <a href="https://trac.torproject.org/projects/tor/ticket/5811">#5811</a>, <a href="https://trac.torproject.org/projects/tor/ticket/8003">#8003</a>), but figured I would wait until we have decided if we are going to rename obfsproxy/pyobfsproxy to something that is less technical and easier to pronounce.</p></li>
+<li><p>Updated a number of translations of the <a href="https://www.torproject.org/docs/short-user-manual.html.en">short user manual</a> and documented <a href="https://trac.torproject.org/projects/tor/wiki/doc/translation/Introduction">how the translation process works</a>.</p></li>
+<li><p>Hired new translators/support assistants and drafted a welcome email with information about the different systems, accounts, escalation process, and so on. I also put together a document explaining <a href="https://trac.torproject.org/projects/tor/wiki/doc/support/Introduction">how to work with our support system</a>.</p></li>
+<li><p>Resolved 94 tickets in the Tor help desk system (see the <a href="https://lists.torproject.org/pipermail/tor-reports/2013-March/000163.html">tor-reports email</a> for the full summary). Thanks to Moritz, again, for taking care of the help desk while I was traveling.</p></li>
+</ul>
 
-<p>Overall, I would say the meeting went well. They learned more about Tor and the projects we are working on, and they are aware that the protections that prevent us from figuring out what Tor users are doing - and who they are - is what&#8217;s keeping all Tor users safe.</p>
+
+<h3>Top 5 things I would like to do next month</h3>
+
+<ul>
+<li><p>Continue with a forensic analysis of the Tor Browser Bundle.</p></li>
+<li><p>Get our new translators/support assistants started with <a href="https://www.transifex.com/projects/p/torproject/">Transifex</a> and <a href="http://www.bestpractical.com/rt/">RT</a>.</p></li>
+<li><p>Decide on a new name for obfsproxy/pyobfsproxy, and update the <a href="https://www.torproject.org/docs/short-user-manual.html.en">short user manual</a> and other documentation.</p></li>
+<li><p>Continue working on an OS X Flash sandbox for the Tor Browser Bundle (<a href="https://trac.torproject.org/projects/tor/ticket/7008">#7008</a>).</p></li>
+<li><p>Travel for conferences, meetings, and other events. In March, I will be in London, Copenhagen, Boston, and Washington DC.</p></li>
+</ul>
+
 </div>
 
 
@@ -109,7 +125,7 @@
   
 
 
-<time datetime="2013-02-04T09:16:00-05:00" pubdate data-updated="true">Feb 4<span>th</span>, 2013</time>
+<time datetime="2013-03-01T08:11:00-05:00" pubdate data-updated="true">Mar 1<span>st</span>, 2013</time>
       
 
 <span class="categories">
@@ -130,10 +146,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/02/02/what-i-did-for-the-tor-project-in-january/" title="Previous Post: What I did for the Tor Project in January">&laquo; What I did for the Tor Project in January</a>
+        <a class="basic-alignment left" href="/blog/2013/02/25/testing-tor-hidden-services-with-burp-pro/" title="Previous Post: Testing Tor Hidden Services with Burp Pro">&laquo; Testing Tor Hidden Services with Burp Pro</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/02/04/training-journalists-in-istanbul/" title="Next Post: Training journalists in Istanbul">Training journalists in Istanbul &raquo;</a>
       
     </p>
   </footer>
@@ -224,8 +238,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.encrypted.cc/blog/2013/02/04/meeting-with-soca-in-london/';
-        var disqus_url = 'http://blog.encrypted.cc/blog/2013/02/04/meeting-with-soca-in-london/';
+        var disqus_identifier = 'http://blog.encrypted.cc/blog/2013/03/01/what-i-did-for-the-tor-project-in-february/';
+        var disqus_url = 'http://blog.encrypted.cc/blog/2013/03/01/what-i-did-for-the-tor-project-in-february/';
         var disqus_script = 'embed.js';
       
     (function () {
