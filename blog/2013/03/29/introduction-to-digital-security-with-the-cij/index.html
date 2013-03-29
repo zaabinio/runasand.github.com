@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Testing Tor Hidden Services with Burp Pro - blog.encrypted.cc</title>
+  <title>Introduction to digital security with the CIJ - blog.encrypted.cc</title>
   <meta name="author" content="Runa A. Sandvik">
 
   
-  <meta name="description" content="On February 15, Dafydd Stuttard announced the release of Burp Suite v1.5.05. This release contains a number of feature enhancements and bugfixes, &hellip;">
+  <meta name="description" content="On Monday the 25th of March, the Centre for Investigative Journalism in London organized a free event where journalists could learn more about &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.encrypted.cc/blog/2013/02/25/testing-tor-hidden-services-with-burp-pro/">
+  <link rel="canonical" href="http://blog.encrypted.cc/blog/2013/03/29/introduction-to-digital-security-with-the-cij/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -59,7 +59,7 @@
   
   <header>
     
-      <h1 class="entry-title">Testing Tor Hidden Services With Burp Pro</h1>
+      <h1 class="entry-title">Introduction to Digital Security With the CIJ</h1>
     
     
       <p class="meta">
@@ -75,38 +75,24 @@
   
 
 
-<time datetime="2013-02-25T09:33:00-05:00" pubdate data-updated="true">Feb 25<span>th</span>, 2013</time>
+<time datetime="2013-03-29T10:40:00-04:00" pubdate data-updated="true">Mar 29<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>On February 15, Dafydd Stuttard announced the release of <a href="http://releases.portswigger.net/2013/02/v1505.html">Burp Suite v1.5.05</a>. This release contains a number of feature enhancements and bugfixes, including an extension to the SOCKS proxy support which allows users to specify that all DNS lookups should be done remotely via the proxy. This means that it is possible to test Tor hidden services with Burp.</p>
+<div class="entry-content"><p>On Monday the 25th of March, the Centre for Investigative Journalism in London organized a free event where journalists could <a href="http://www.tcij.org/events/2013-03-25/introduction-digital-security">learn more about digital security</a>. I was invited to speak about Tor, other speakers covered OTR, TrueCrypt, GPG, and mobile security.</p>
 
-<p>This feature is currently only available in Burp Pro, but should eventually make its way into the free edition.</p>
+<p>The attendees were divided into five groups, and each speaker had 20-25 minutes with each group. I gave out USB sticks with the <a href="https://www.torproject.org/projects/torbrowser.html.en">Tor Browser Bundle</a>, the <a href="https://blog.torproject.org/blog/new-pluggable-transports-bundles-02411-alpha-flashproxy-obfsproxy">Pluggable Transports Bundle</a>, the <a href="https://www.torproject.org/dist/manual/short-user-manual_en.xhtml">short user manual</a>, and the <a href="https://www.torproject.org/about/findoc/2012-TorProject-Annual-Report.pdf">2012 annual report</a>.</p>
 
-<h3>Tor hidden services</h3>
+<p>I talked a bit about the history of Tor and the Tor Project, discussed a few different threats, mentioned hidden services, listed a few examples of real world use, and helped everyone get the Tor Browser Bundle up and running. I did not have access to a projector or whiteboard, so I did my best to illustrate how Tor works by drawing boxes, arrows, blobs, and stick figures on a piece of paper.</p>
 
-<p><a href="https://www.torproject.org/docs/hidden-services.html.en">Tor hidden services</a>, sometimes also referred to as the <em>hidden web</em>, <em>dark web</em>, and <em>deep web</em>, were deployed on the Tor network in 2004. Hidden services allow users to host various kinds of resources, such as websites and instant messaging servers, without having their identity or location revealed. Not only does this protect the operators, but also the resources.</p>
+<p>A number of people asked if we had some sort of document or manual explaining all the topics covered at this event. I mentioned <a href="https://securityinabox.org/">Security in a box</a> and the <a href="http://flossmanuals.net/">FLOSS Manuals</a>, but also pointed out that there is currently no single document available, that I am aware of, which explains all of these topics.</p>
 
-<p>A hidden service can only be accessed through its Tor-specific <em>.onion</em> pseudo-<em>top-level domain (TLD)</em>. One example is <a href="http://3g2upl4pq6kufc4m.onion/">3g2upl4pq6kufc4m.onion</a>, which is the address of the <a href="https://duckduckgo.com/">Duck Duck Go</a> search engine. The relays in the Tor network understand the .onion pseudo-TLD and route data anonymously both to and from the hidden service. The IP address, physical location, or operator of a Tor hidden service is never revealed to relays in the Tor network, visitors, or the Tor Project &#8211; as long as the hidden service has been properly <a href="https://www.torproject.org/docs/tor-hidden-service.html.en">configured and secured</a>.</p>
+<p>I have previously discussed creating such a document with the <a href="http://www.rorypecktrust.org/">Rory Peck Trust</a>, which is a London based organization that specialises in safety, security and professional development for freelance journalists. I mentioned this again when I met with them the day after the CIJ event, and I&#8217;m looking forward to seeing the end result in a few months.</p>
 
-<h3>Tor hidden services and Burp</h3>
-
-<p>To test a Tor hidden service with Burp, make sure the Tor Browser, Tor, and Burp can all talk to each other:</p>
-
-<ul>
-<li>Download the <a href="https://www.torproject.org/download/download-easy.html.en">Tor Browser Bundle</a>, <a href="https://www.torproject.org/docs/verifying-signatures.html.en">verify the signature</a>, and get it up and running</li>
-<li>Figure out which SOCKS port the Tor Browser is using to talk to Tor: <em>Preferences</em>, <em>Advanced</em>, <em>Network</em>, <em>Settings</em> (next to <em>Configure how TorBrowser connects to the Internet</em>)</li>
-<li>Configure Burp to use the same SOCKS proxy as the Tor Browser: <em>Options</em>, <em>Connections</em>, scroll down to the SOCKS proxy section, enter the host and port, and tick <em>Use SOCKS proxy</em> and <em>Do DNS lookups over SOCKS proxy</em></li>
-<li>Configure the Tor Browser to use Burp as an HTTP Proxy: on the proxy settings page, enter <em>127.0.0.1:8080</em> as the HTTP proxy and tick <em>Use this proxy for all server protocols</em></li>
-</ul>
-
-
-<p>Visiting <a href="http://3g2upl4pq6kufc4m.onion/">3g2upl4pq6kufc4m.onion</a> in the Tor Browser gives the following output in Burp:</p>
-
-<p><img src="/images/burp-tor-hs.png"></p>
+<p>Thanks to the <a href="http://tcij.org/">Centre for Investigative Journalism</a> for hosting the event and inviting me.</p>
 </div>
 
 
@@ -129,12 +115,12 @@
   
 
 
-<time datetime="2013-02-25T09:33:00-05:00" pubdate data-updated="true">Feb 25<span>th</span>, 2013</time>
+<time datetime="2013-03-29T10:40:00-04:00" pubdate data-updated="true">Mar 29<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/security/'>security</a>
+    <a class='category' href='/blog/categories/torproject/'>torproject</a>
   
 </span>
 
@@ -150,10 +136,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/02/04/training-journalists-in-istanbul/" title="Previous Post: Training journalists in Istanbul">&laquo; Training journalists in Istanbul</a>
+        <a class="basic-alignment left" href="/blog/2013/03/28/social-media-online-anonymity-the-arab-spring/" title="Previous Post: Social Media, Online Anonymity, the Arab Spring">&laquo; Social Media, Online Anonymity, the Arab Spring</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/03/01/what-i-did-for-the-tor-project-in-february/" title="Next Post: What I did for the Tor Project in February">What I did for the Tor Project in February &raquo;</a>
       
     </p>
   </footer>
@@ -244,8 +228,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.encrypted.cc/blog/2013/02/25/testing-tor-hidden-services-with-burp-pro/';
-        var disqus_url = 'http://blog.encrypted.cc/blog/2013/02/25/testing-tor-hidden-services-with-burp-pro/';
+        var disqus_identifier = 'http://blog.encrypted.cc/blog/2013/03/29/introduction-to-digital-security-with-the-cij/';
+        var disqus_url = 'http://blog.encrypted.cc/blog/2013/03/29/introduction-to-digital-security-with-the-cij/';
         var disqus_script = 'embed.js';
       
     (function () {
