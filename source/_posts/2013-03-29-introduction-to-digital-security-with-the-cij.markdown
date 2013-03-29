@@ -14,6 +14,6 @@ I talked a bit about the history of Tor and the Tor Project, discussed a few dif
 
 A number of people asked if we had some sort of document or manual explaining all the topics covered at this event. I mentioned [Security in a box](https://securityinabox.org/) and the [FLOSS Manuals](http://flossmanuals.net/), but also pointed out that there is currently no single document available, that I am aware of, which explains all of these topics. 
 
-I have previously discussed creating such a document with the [Rory Peck Trust](http://www.rorypecktrust.org/), which is a London based organization that specialises in safety, security and professional development for freelance journalists. I mentioned this again when I met with them the day after the CIJ event, and I'm looking forward to seeing the end result in a few months.
+I have previously discussed creating such a document with the [Rory Peck Trust](http://www.rorypecktrust.org/), which is a London based organization that specializes in safety, security and professional development for freelance journalists. I mentioned this again when I met with them the day after the CIJ event, and I'm looking forward to seeing the end result in a few months.
 
 Thanks to the [Centre for Investigative Journalism](http://tcij.org/) for hosting the event and inviting me. 
