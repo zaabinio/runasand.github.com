@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Meeting with SOCA in London - blog.encrypted.cc</title>
+  <title>Forensic analysis of Tor on Linux - blog.encrypted.cc</title>
   <meta name="author" content="Runa A. Sandvik">
 
   
-  <meta name="description" content="In January I met with the Serious Organised Crime Agency (SOCA) in London, UK. One of the challenges when dealing with online threats (cybercrime/e- &hellip;">
+  <meta name="description" content="As part of a deliverable for two of our sponsors (Sponsor J, Sponsor L), I have been working on a forensic analysis of the Tor Browser Bundle. In &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.encrypted.cc/blog/2013/02/04/meeting-with-soca-in-london/">
+  <link rel="canonical" href="http://blog.encrypted.cc/blog/2013/04/12/forensic-analysis-of-tor-on-linux/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -59,7 +59,7 @@
   
   <header>
     
-      <h1 class="entry-title">Meeting With SOCA in London</h1>
+      <h1 class="entry-title">Forensic Analysis of Tor on Linux</h1>
     
     
       <p class="meta">
@@ -75,18 +75,70 @@
   
 
 
-<time datetime="2013-02-04T09:16:00-05:00" pubdate data-updated="true">Feb 4<span>th</span>, 2013</time>
+<time datetime="2013-04-12T22:05:00-04:00" pubdate data-updated="true">Apr 12<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>In January I met with the <a href="http://www.soca.gov.uk/">Serious Organised Crime Agency (SOCA)</a> in London, UK. One of the challenges when dealing with online threats (cybercrime/e-crime) is understanding which leads not to follow. My goal was to help them understand what Tor is, how it works (both from a user and a relay operator point of view), and what it can and cannot do.</p>
+<div class="entry-content"><p>As part of a deliverable for two of our sponsors (<a href="https://trac.torproject.org/projects/tor/wiki/org/sponsors/SponsorJ">Sponsor J</a>, <a href="https://trac.torproject.org/projects/tor/wiki/org/sponsors/SponsorL">Sponsor L</a>), I have been working on a forensic analysis of the Tor Browser Bundle. In this three part series, I will summarize the most interesting or significant traces left behind after using the bundle. This post will cover Debian Linux (<a href="https://trac.torproject.org/projects/tor/ticket/8166">#8166</a>), part two will cover Windows 7, and part three will cover OS X 10.8.</p>
 
-<p>I talked about the Tor software ecosystem, including <a href="https://metrics.torproject.org/exonerator.html">ExoneraTor</a> (the website that tells you whether a given IP address was a Tor relay), and mentioned that we list all <a href="https://www.torproject.org/projects/projects.html.en">official projects</a> on our website. I also mentioned Roger&#8217;s trip to the <a href="https://blog.torproject.org/blog/trip-report-october-fbi-conference">FBI conference</a> in October 2012, and talked about some of the experiences we have had teaching US-based law enforcement about Tor.</p>
+<h3>Process</h3>
 
-<p>Overall, I would say the meeting went well. They learned more about Tor and the projects we are working on, and they are aware that the protections that prevent us from figuring out what Tor users are doing - and who they are - is what&#8217;s keeping all Tor users safe.</p>
+<p>I set up a virtual machine with a fresh install of Debian 6.0 Squeeze,
+logged in once and shut it down cleanly. I then connected the virtual
+drive to another virtual machine and used <em>dd</em> to create an image of the
+drive. I also used <em>hashdeep</em> to compute hashes for every file on the
+drive, and <em>rsync</em> to copy all the files over to an external drive.</p>
+
+<p>After having secured a copy of the clean virtual machine, I rebooted the
+system, connected an external drive, and copied the Tor Browser Bundle
+(version 2.3.25-6, 64-bit) from the external drive to my Debian home
+directory. I extracted the package archive and started the Tor Browser
+Bundle by running <em>./start-tor-browser</em> inside the Tor Browser directory.</p>
+
+<p>Once the Tor Browser was up and running, I browsed to a few pages, read
+a few paragraphs here and there, clicked on a few links, and then shut
+it down by closing the Tor Browser and clicking on the <em>Exit</em>-button in
+Vidalia. The Tor Browser did not crash and I did not see any error
+messages. I deleted the Tor Browser directory and the tarball using
+<em>rm -rf</em>.</p>
+
+<p>I repeated the steps with <em>dd</em>, <em>hashdeep</em>, and <em>rsync</em> to create a copy of
+the tainted virtual machine.</p>
+
+<h3>Results</h3>
+
+<p>Using <em>hashdeep</em>, I compared the hashes from the tainted virtual machine
+against the hashes from the clean virtual machine: <a href="http://blog.encrypted.cc/files/debian_changed_files.txt">68 files</a>
+had a hash that did not match any of the hashes in the clean set. The
+most interesting files are:</p>
+
+<p><strong>~/.local/share/gvfs-metadata/home</strong>: contains the filename of
+the Tor Browser Bundle tarball:
+<em>tor-browser-gnu-linux-x86_64-2.3.25-5-dev-en-US.tar.gz</em>. GVFS is the
+virtual filesystem for the GNOME desktop, so this result will probably
+vary depending on the window manager used. I have created
+<a href="https://trac.torproject.org/projects/tor/ticket/8695">#8695</a> for this issue.</p>
+
+<p><strong>~/.xsession-errors</strong>: contains the following string: <em>&#8220;Window
+manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a
+timestamp of 0 for 0x3800089 (Tor Browse)&#8221;</em>. It is worth noting that a
+file named <em>.xsession-errors.old</em> could also exist. I have created
+<a href="https://trac.torproject.org/projects/tor/ticket/8696">#8696</a> for this issue.</p>
+
+<p><strong>~/.bash_history</strong>: contains a record of commands typed into
+the terminal. I started the Tor Browser Bundle from the command line, so
+this file contains lines such as <em>./start-tor-browser</em>. I have created
+<a href="https://trac.torproject.org/projects/tor/ticket/8697">#8697</a> for this
+issue.</p>
+
+<p><strong>/var/log/daemon.log</strong>, <strong>/var/log/syslog</strong>, <strong>/var/log/kern.log</strong>,
+<strong>/var/log/messages</strong>: contains information about attached devices. I
+had an external drive attached to the virtual machine, so these files
+contain lines such as <em>&#8220;Mounted /dev/sdb1 (Read-Write, label &#8220;THA&#8221;, NTFS
+3.1)&#8221;</em> and <em>&#8220;Initializing USB Mass Storage driver&#8230;&#8221;</em>.</p>
 </div>
 
 
@@ -109,7 +161,7 @@
   
 
 
-<time datetime="2013-02-04T09:16:00-05:00" pubdate data-updated="true">Feb 4<span>th</span>, 2013</time>
+<time datetime="2013-04-12T22:05:00-04:00" pubdate data-updated="true">Apr 12<span>th</span>, 2013</time>
       
 
 <span class="categories">
@@ -130,10 +182,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/02/02/what-i-did-for-the-tor-project-in-january/" title="Previous Post: What I did for the Tor Project in January">&laquo; What I did for the Tor Project in January</a>
+        <a class="basic-alignment left" href="/blog/2013/03/30/what-i-did-for-the-tor-project-in-march/" title="Previous Post: What I Did for the Tor Project in March">&laquo; What I Did for the Tor Project in March</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/02/04/training-journalists-in-istanbul/" title="Next Post: Training journalists in Istanbul">Training journalists in Istanbul &raquo;</a>
       
     </p>
   </footer>
@@ -224,8 +274,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.encrypted.cc/blog/2013/02/04/meeting-with-soca-in-london/';
-        var disqus_url = 'http://blog.encrypted.cc/blog/2013/02/04/meeting-with-soca-in-london/';
+        var disqus_identifier = 'http://blog.encrypted.cc/blog/2013/04/12/forensic-analysis-of-tor-on-linux/';
+        var disqus_url = 'http://blog.encrypted.cc/blog/2013/04/12/forensic-analysis-of-tor-on-linux/';
         var disqus_script = 'embed.js';
       
     (function () {
