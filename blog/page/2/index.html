@@ -5,11 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: security - blog.encrypted.cc</title>
+  <title>blog.encrypted.cc</title>
   <meta name="author" content="Runa A. Sandvik">
 
   
-  <meta name="description" content="Category: security">
+  <meta name="description" content="At the beginning of each month, I send an email to the
+tor-reports
+mailing list describing what I did the previous month. I figured that
+re-posting &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.encrypted.ccblog/categories/security/">
+  <link rel="canonical" href="http://blog.encrypted.cc/blog/page/2/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -54,54 +57,78 @@
 </nav> -->
   <div id="main">
     <div id="content">
-      <div>
-<article role="article">
+      <div class="blog-index">
   
+  
+  
+    <article>
+      
   <header>
-    <h1 class="entry-title">Category: Security</h1>
+    
+      <h1 class="entry-title"><a href="/blog/2013/02/02/what-i-did-for-the-tor-project-in-january/">What I Did for the Tor Project in January</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-02T17:29:00-05:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2013</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+  <div class="entry-content"><p>At the beginning of each month, I send an email to the
+<a href="https://lists.torproject.org/pipermail/tor-reports/">tor-reports</a>
+mailing list describing what I did the previous month. I figured that
+re-posting this status update here would be a good way to start my blog.</p>
 
-  
-  <h2>2013</h2>
+<h3>Top 4 things I did this month</h3>
 
-<article>
-  
-<h1><a href="/blog/2013/03/01/little-printer-auth-bypass/">Little Printer Auth Bypass</a></h1>
-<time datetime="2013-03-01T10:29:00-05:00" pubdate><span class='month'>Mar</span> <span class='day'>01</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/security/'>security</a></span>
-</footer>
-
-
-</article>
-
+<ul>
+<li><p>Started working on an OS X Flash sandbox for the <a href="https://www.torproject.org/projects/torbrowser.html.en">Tor Browser Bundle</a> <a href="https://trac.torproject.org/projects/tor/ticket/7008">(#7008)</a>. Building TBB on OS X was a bit of a challenge <a href="https://trac.torproject.org/projects/tor/ticket/7964">(#7964)</a> and I also ran into a bug with the Tor Browser crashing whenever I visit certain Flash sites <a href="https://trac.torproject.org/projects/tor/ticket/8129">(#8129)</a>.</p></li>
+<li><p>I interviewed 26 candidates for the <a href="https://www.torproject.org/about/jobs-translatorsupport.html.en">translator/support assistant position(s)</a>. All the interviews were done via email and I spent a lot of time reviewing the answers I received. I hope we can move forward and hire support assistants in February.</p></li>
+<li><p>I gave a talk about Tor and the Arab Spring at <a href="http://www.hacdc.org/">HacDC</a>. I met with researchers in DC and listened to talks about privacy, stylometry, analysis of onion routing security, and an evaluation of relay
+selection in Tor. I attended a meeting with the US Drug Enforcement Agency (DEA) where Andrew talked about all things Tor. I traveled to London and Istanbul (trip reports will be published on Monday).</p></li>
+<li><p>I resolved 204 tickets in the Tor help desk system (see the <a href="https://lists.torproject.org/pipermail/tor-reports/2013-February/000148.html">tor-reports email</a> for the full summary). I&#8217;d like to thank Moritz for taking care of the help desk while I was traveling.</p></li>
+</ul>
 
 
-<article>
-  
-<h1><a href="/blog/2013/02/25/testing-tor-hidden-services-with-burp-pro/">Testing Tor Hidden Services with Burp Pro</a></h1>
-<time datetime="2013-02-25T09:33:00-05:00" pubdate><span class='month'>Feb</span> <span class='day'>25</span> <span class='year'>2013</span></time>
+<h3>Top 5 things I would like to do next month:</h3>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/security/'>security</a></span>
-</footer>
-
-
-</article>
+<ul>
+<li><p>Begin a forensic analysis of the Tor Browser Bundle on OS X 10.8 <a href="https://trac.torproject.org/projects/tor/ticket/6846">(#6846)</a> and Windows 7 <a href="https://trac.torproject.org/projects/tor/ticket/6845">(#6845)</a>. I still need to figure out if we are adding Linux to the list (the <a href="https://trac.torproject.org/projects/tor/wiki/org/sponsors/SponsorJ">sponsor page</a> says yes, but we have no ticket for it).</p></li>
+<li><p>Continue working on an OS X Flash sandbox for the Tor Browser Bundle <a href="https://trac.torproject.org/projects/tor/ticket/7008">(#7008)</a>. I should be able to continue with this even if the browser is crashing on certain sites.</p></li>
+<li><p>I have a few Trac tickets related to translations and <a href="https://www.torproject.org/docs/short-user-manual.html.en">the short user manual</a>. I also want to properly document how the translation process works (from adding a new translation resource to pulling down new or updated translations).</p></li>
+<li><p>Help new translators/support assistants get started with <a href="https://www.transifex.com/projects/p/torproject/">Transifex</a> and <a href="http://www.bestpractical.com/rt/">RT</a>. I started writing an <a href="https://trac.torproject.org/projects/tor/wiki/doc/support/Introduction">introduction</a> to the Tor help desk system and should make sure this is complete and up to date.</p></li>
+<li><p>Attend <a href="http://www.shmoocon.org/">Shmoocon</a> and go on vacation.</p></li>
+</ul>
 
 </div>
-
   
-</article>
+  
 
+
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="archives">Blog Archives</a>
+    
+    <a class="next" href="/">Newer &rarr;</a>
+    
+  </div>
 </div>
-
 <aside class="sidebar">
   
     <section>
@@ -162,7 +189,6 @@
 
   
 </aside>
-
 
     </div>
   </div>

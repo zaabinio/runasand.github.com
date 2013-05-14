@@ -4,7 +4,7 @@
   <title><![CDATA[blog.encrypted.cc]]></title>
   <link href="http://blog.encrypted.cc/atom.xml" rel="self"/>
   <link href="http://blog.encrypted.cc/"/>
-  <updated>2013-04-13T00:24:34-04:00</updated>
+  <updated>2013-05-14T10:16:24-04:00</updated>
   <id>http://blog.encrypted.cc/</id>
   <author>
     <name><![CDATA[Runa A. Sandvik]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[What I Did for the Tor Project in April]]></title>
+    <link href="http://blog.encrypted.cc/blog/2013/05/14/what-i-did-for-the-tor-project-in-april/"/>
+    <updated>2013-05-14T09:57:00-04:00</updated>
+    <id>http://blog.encrypted.cc/blog/2013/05/14/what-i-did-for-the-tor-project-in-april</id>
+    <content type="html"><![CDATA[<h3>Top 5 things I did this month</h3>
+
+<ul>
+<li><p>Completed a <a href="http://blog.encrypted.cc/blog/2013/04/12/forensic-analysis-of-tor-on-linux/">forensic analysis of the Tor Browser Bundle on Linux</a> (<a href="https://trac.torproject.org/projects/tor/ticket/8166">#8166</a>).</p></li>
+<li><p>Started on a forensic analysis of the Tor Browser Bundle on Windows (<a href="https://trac.torproject.org/projects/tor/ticket/6845">#6845</a>).</p></li>
+<li><p>Updated the <a href="https://cloud.torproject.org/">Tor Cloud</a> images with new options for <em>BandwidthRate</em> and <em>BandwidthBurst</em> (<a href="https://trac.torproject.org/projects/tor/ticket/7849">#7849</a>, <a href="https://trac.torproject.org/projects/tor/ticket/8193">#8193</a>), updated the step-by-step instructions on the Tor Cloud website (<a href="https://trac.torproject.org/projects/tor/ticket/8392">#8392</a>), and documented the contents of the images (<a href="https://trac.torproject.org/projects/tor/ticket/7848">#7848</a>).</p></li>
+<li><p>Tried to configure, test, and update <a href="https://ask.torproject.org/">ask.torproject.org</a>, our new Q&amp;A site (<a href="https://trac.torproject.org/projects/tor/ticket/8603">#8603</a>). AskBot has a few bugs here and there, and I&#8217;m not sure if it can do everything that we need and/or want it to do (<a href="https://trac.torproject.org/projects/tor/ticket/5995">#5995</a>). I will continue this work as soon as <a href="https://ask.torproject.org/">ask.torproject.org</a> is fully set up.</p></li>
+<li><p>Visited New York to be interviewed by PBS for their Off Book series, attended the International Engagement on Cyber conference in DC, visited San Francisco, and attended the OpenITP Circumvention Tech Summit in Hong Kong.</p></li>
+</ul>
+
+
+<h3>Top 5 things I would like to do next month</h3>
+
+<ul>
+<li><p>Configure, test, and update <a href="https://ask.torproject.org/">ask.torproject.org</a> (<a href="https://trac.torproject.org/projects/tor/ticket/8603">#8603</a>).</p></li>
+<li><p>Document the new support workflow (<a href="https://trac.torproject.org/projects/tor/ticket/8518">#8518</a>), look at setting up translation teams on Transifex (<a href="https://trac.torproject.org/projects/tor/ticket/8717">#8717</a>), and create per language article classes (for answer templates) associated with the support help queues (<a href="https://trac.torproject.org/projects/tor/ticket/8831">#8831</a>).</p></li>
+<li><p>Finish the forensic analysis of the Tor Browser Bundle on Windows (<a href="https://trac.torproject.org/projects/tor/ticket/6845">#6845</a>) and document my findings.</p></li>
+<li><p>Start on a forensic analysis of the Tor Browser Bundle on OS X (<a href="https://trac.torproject.org/projects/tor/ticket/6846">#6846</a>).</p></li>
+<li><p>Visit Brussels and speak at NATO&#8217;s <a href="http://www.nato.int/socialmedia/social-media-forum.html">Social Media Lessons Learned for International Organizations</a> discussion forum.</p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Forensic analysis of Tor on Linux]]></title>
