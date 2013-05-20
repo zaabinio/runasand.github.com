@@ -1,0 +1,256 @@
+/media/virtual/Boot/BCD
+/media/virtual/Boot/BCD.LOG
+/media/virtual/Boot/BOOTSTAT.DAT
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/GatherLogs/SystemIndex/SystemIndex.1.Crwl
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/GatherLogs/SystemIndex/SystemIndex.1.gthr
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/MSS.chk
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/MSS.log
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/MSS00007.log
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/MSS00008.log
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/00010004.ci
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/00010004.dir
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/00010004.wid
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/00010004.wsb
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/CiAB0002.001
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/CiAB0002.002
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/CiAD0002.001
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/CiAD0002.002
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/INDEX.000
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/INDEX.001
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/INDEX.002
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/PropMap/CiPT0000.000
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/PropMap/CiPT0000.001
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/PropMap/CiPT0000.002
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/SecStore/CiST0000.000
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/SecStore/CiST0000.001
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/SecStore/CiST0000.002
+/media/virtual/Documents and Settings/All Users/Microsoft/Search/Data/Applications/Windows/Windows.edb
+/media/virtual/Documents and Settings/All Users/Microsoft/Windows Defender/Support/MPLog-07132009-221054.log
+/media/virtual/Documents and Settings/runa/AppData/Local/IconCache.db
+/media/virtual/Documents and Settings/runa/AppData/Local/Microsoft/Windows/Caches/cversions.1.db
+/media/virtual/Documents and Settings/runa/AppData/Local/Microsoft/Windows/Caches/{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000006.db
+/media/virtual/Documents and Settings/runa/AppData/Local/Microsoft/Windows/Explorer/thumbcache_256.db
+/media/virtual/Documents and Settings/runa/AppData/Local/Microsoft/Windows/Explorer/thumbcache_96.db
+/media/virtual/Documents and Settings/runa/AppData/Local/Microsoft/Windows/Explorer/thumbcache_idx.db
+/media/virtual/Documents and Settings/runa/AppData/Local/Microsoft/Windows/UsrClass.dat
+/media/virtual/Documents and Settings/runa/AppData/Local/Microsoft/Windows/UsrClass.dat.LOG1
+/media/virtual/Documents and Settings/runa/AppData/Local/Microsoft/Windows/WER/ReportQueue/NonCritical_x64_84cd279a5e83221bfa7edcb36665592c1974e4_cab_0b21673a/DMI671B.tmp.log.xml
+/media/virtual/Documents and Settings/runa/AppData/Local/Microsoft/Windows/WER/ReportQueue/NonCritical_x64_84cd279a5e83221bfa7edcb36665592c1974e4_cab_0b21673a/Report.wer
+/media/virtual/Documents and Settings/runa/AppData/Local/Microsoft/Windows/WindowsUpdate.log
+/media/virtual/Documents and Settings/runa/Local Settings/IconCache.db
+/media/virtual/Documents and Settings/runa/Local Settings/Microsoft/Windows/Caches/cversions.1.db
+/media/virtual/Documents and Settings/runa/Local Settings/Microsoft/Windows/Caches/{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000006.db
+/media/virtual/Documents and Settings/runa/Local Settings/Microsoft/Windows/Explorer/thumbcache_256.db
+/media/virtual/Documents and Settings/runa/Local Settings/Microsoft/Windows/Explorer/thumbcache_96.db
+/media/virtual/Documents and Settings/runa/Local Settings/Microsoft/Windows/Explorer/thumbcache_idx.db
+/media/virtual/Documents and Settings/runa/Local Settings/Microsoft/Windows/UsrClass.dat
+/media/virtual/Documents and Settings/runa/Local Settings/Microsoft/Windows/UsrClass.dat.LOG1
+/media/virtual/Documents and Settings/runa/Local Settings/Microsoft/Windows/WER/ReportQueue/NonCritical_x64_84cd279a5e83221bfa7edcb36665592c1974e4_cab_0b21673a/DMI671B.tmp.log.xml
+/media/virtual/Documents and Settings/runa/Local Settings/Microsoft/Windows/WER/ReportQueue/NonCritical_x64_84cd279a5e83221bfa7edcb36665592c1974e4_cab_0b21673a/Report.wer
+/media/virtual/Documents and Settings/runa/Local Settings/Microsoft/Windows/WindowsUpdate.log
+/media/virtual/Documents and Settings/runa/NTUSER.DAT
+/media/virtual/Documents and Settings/runa/ntuser.dat.LOG1
+/media/virtual/pagefile.sys
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/GatherLogs/SystemIndex/SystemIndex.1.Crwl
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/GatherLogs/SystemIndex/SystemIndex.1.gthr
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/MSS.chk
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/MSS.log
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/MSS00007.log
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/MSS00008.log
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/00010004.ci
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/00010004.dir
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/00010004.wid
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/00010004.wsb
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/CiAB0002.001
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/CiAB0002.002
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/CiAD0002.001
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/CiAD0002.002
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/INDEX.000
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/INDEX.001
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/INDEX.002
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/PropMap/CiPT0000.000
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/PropMap/CiPT0000.001
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/PropMap/CiPT0000.002
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/SecStore/CiST0000.000
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/SecStore/CiST0000.001
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/SecStore/CiST0000.002
+/media/virtual/ProgramData/Microsoft/Search/Data/Applications/Windows/Windows.edb
+/media/virtual/ProgramData/Microsoft/Windows Defender/Support/MPLog-07132009-221054.log
+/media/virtual/System Volume Information/Syscache.hve
+/media/virtual/System Volume Information/Syscache.hve.LOG1
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/GatherLogs/SystemIndex/SystemIndex.1.Crwl
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/GatherLogs/SystemIndex/SystemIndex.1.gthr
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/MSS.chk
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/MSS.log
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/MSS00007.log
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/MSS00008.log
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/00010004.ci
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/00010004.dir
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/00010004.wid
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/00010004.wsb
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/CiAB0002.001
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/CiAB0002.002
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/CiAD0002.001
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/CiAD0002.002
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/INDEX.000
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/INDEX.001
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/Indexer/CiFiles/INDEX.002
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/PropMap/CiPT0000.000
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/PropMap/CiPT0000.001
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/PropMap/CiPT0000.002
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/SecStore/CiST0000.000
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/SecStore/CiST0000.001
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Projects/SystemIndex/SecStore/CiST0000.002
+/media/virtual/Users/All Users/Microsoft/Search/Data/Applications/Windows/Windows.edb
+/media/virtual/Users/All Users/Microsoft/Windows Defender/Support/MPLog-07132009-221054.log
+/media/virtual/Users/runa/AppData/Local/IconCache.db
+/media/virtual/Users/runa/AppData/Local/Microsoft/Windows/Caches/cversions.1.db
+/media/virtual/Users/runa/AppData/Local/Microsoft/Windows/Caches/{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000006.db
+/media/virtual/Users/runa/AppData/Local/Microsoft/Windows/Explorer/thumbcache_256.db
+/media/virtual/Users/runa/AppData/Local/Microsoft/Windows/Explorer/thumbcache_96.db
+/media/virtual/Users/runa/AppData/Local/Microsoft/Windows/Explorer/thumbcache_idx.db
+/media/virtual/Users/runa/AppData/Local/Microsoft/Windows/UsrClass.dat
+/media/virtual/Users/runa/AppData/Local/Microsoft/Windows/UsrClass.dat.LOG1
+/media/virtual/Users/runa/AppData/Local/Microsoft/Windows/WER/ReportQueue/NonCritical_x64_84cd279a5e83221bfa7edcb36665592c1974e4_cab_0b21673a/DMI671B.tmp.log.xml
+/media/virtual/Users/runa/AppData/Local/Microsoft/Windows/WER/ReportQueue/NonCritical_x64_84cd279a5e83221bfa7edcb36665592c1974e4_cab_0b21673a/Report.wer
+/media/virtual/Users/runa/AppData/Local/Microsoft/Windows/WindowsUpdate.log
+/media/virtual/Users/runa/Local Settings/IconCache.db
+/media/virtual/Users/runa/Local Settings/Microsoft/Windows/Caches/cversions.1.db
+/media/virtual/Users/runa/Local Settings/Microsoft/Windows/Caches/{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000006.db
+/media/virtual/Users/runa/Local Settings/Microsoft/Windows/Explorer/thumbcache_256.db
+/media/virtual/Users/runa/Local Settings/Microsoft/Windows/Explorer/thumbcache_96.db
+/media/virtual/Users/runa/Local Settings/Microsoft/Windows/Explorer/thumbcache_idx.db
+/media/virtual/Users/runa/Local Settings/Microsoft/Windows/UsrClass.dat
+/media/virtual/Users/runa/Local Settings/Microsoft/Windows/UsrClass.dat.LOG1
+/media/virtual/Users/runa/Local Settings/Microsoft/Windows/WER/ReportQueue/NonCritical_x64_84cd279a5e83221bfa7edcb36665592c1974e4_cab_0b21673a/DMI671B.tmp.log.xml
+/media/virtual/Users/runa/Local Settings/Microsoft/Windows/WER/ReportQueue/NonCritical_x64_84cd279a5e83221bfa7edcb36665592c1974e4_cab_0b21673a/Report.wer
+/media/virtual/Users/runa/Local Settings/Microsoft/Windows/WindowsUpdate.log
+/media/virtual/Users/runa/NTUSER.DAT
+/media/virtual/Users/runa/ntuser.dat.LOG1
+/media/virtual/Windows/AppCompat/Programs/RecentFileCache.bcf
+/media/virtual/Windows/assembly/NativeImages_v2.0.50727_64/System.ServiceModel/caf44a89a6ea628053ab717f461cd123/System.ServiceModel.ni.dll
+/media/virtual/Windows/assembly/NativeImages_v2.0.50727_64/System.IdentityMode#/091bb74d56e17141cbf9c44c711b1daa/System.IdentityModel.Selectors.ni.dll
+/media/virtual/Windows/assembly/NativeImages_v2.0.50727_64/System.Messaging/a352bc659329656f42117ae5b708302d/System.Messaging.ni.dll
+/media/virtual/Windows/assembly/NativeImages_v2.0.50727_64/Microsoft.Transacti#/649642934fb81054d494e607c0534af6/Microsoft.Transactions.Bridge.ni.dll
+/media/virtual/Windows/bootstat.dat
+/media/virtual/Windows/inf/setupapi.dev.log
+/media/virtual/Windows/inf/setupapi.ev1
+/media/virtual/Windows/inf/setupapi.ev2
+/media/virtual/Windows/inf/setupapi.ev3
+/media/virtual/Windows/inf/usbstor.PNF
+/media/virtual/Windows/Logs/CBS/CBS.log
+/media/virtual/Windows/Microsoft.NET/Framework/v4.0.30319/ngen_service.log
+/media/virtual/Windows/Microsoft.NET/Framework64/v4.0.30319/ngen_service.log
+/media/virtual/Windows/Prefetch/AgAppLaunch.db
+/media/virtual/Windows/Prefetch/AgGlFaultHistory.db
+/media/virtual/Windows/Prefetch/AgGlFgAppHistory.db
+/media/virtual/Windows/Prefetch/AgGlGlobalHistory.db
+/media/virtual/Windows/Prefetch/AgRobust.db
+/media/virtual/Windows/Prefetch/CONHOST.EXE-3218E401.pf
+/media/virtual/Windows/Prefetch/PfSvPerfStats.bin
+/media/virtual/Windows/Prefetch/ReadyBoot/Trace7.fx
+/media/virtual/Windows/Prefetch/SPPSVC.EXE-CBE91656.pf
+/media/virtual/Windows/Prefetch/START TOR BROWSER.EXE-F5557FAC.pf
+/media/virtual/Windows/Prefetch/SVCHOST.EXE-135A30D8.pf
+/media/virtual/Windows/Prefetch/SVCHOST.EXE-18D06B2E.pf
+/media/virtual/Windows/Prefetch/TBB-FIREFOX.EXE-350502C5.pf
+/media/virtual/Windows/Prefetch/TOR-BROWSER-2.3.25-6_EN-US.EX-1354A499.pf
+/media/virtual/Windows/Prefetch/TOR.EXE-D7159D93.pf
+/media/virtual/Windows/Prefetch/DINOTIFY.EXE-06EB7C61.pf
+/media/virtual/Windows/Prefetch/DLLHOST.EXE-71214090.pf
+/media/virtual/Windows/Prefetch/DRVINST.EXE-5F8E77CD.pf
+/media/virtual/Windows/Prefetch/TRUSTEDINSTALLER.EXE-031B6478.pf
+/media/virtual/Windows/Prefetch/VIDALIA.EXE-5167E0BC.pf
+/media/virtual/Windows/Prefetch/RUNDLL32.EXE-3D2D6BF0.pf
+/media/virtual/Windows/Prefetch/RUNDLL32.EXE-E916072B.pf
+/media/virtual/Windows/Prefetch/SEARCHFILTERHOST.EXE-AA7A1FDD.pf
+/media/virtual/Windows/Prefetch/SEARCHPROTOCOLHOST.EXE-AFAD3EF9.pf
+/media/virtual/Windows/Prefetch/LOGONUI.EXE-1BEE4A84.pf
+/media/virtual/Windows/Prefetch/WMIADAP.EXE-369DF1CD.pf
+/media/virtual/Windows/Prefetch/WMIPRVSE.EXE-43972D0F.pf
+/media/virtual/Windows/Prefetch/WUAUCLT.EXE-830BCC14.pf
+/media/virtual/Windows/Prefetch/MSCORSVW.EXE-98F0699A.pf
+/media/virtual/Windows/Prefetch/MSCORSVW.EXE-FAA88858.pf
+/media/virtual/Windows/Registration/{02D4B3F1-FD88-11D1-960D-00805FC79235}.{296FFF56-7553-4442-B95E-AFC112BE83FB}.crmlog
+/media/virtual/Windows/ServiceProfiles/LocalService/NTUSER.DAT
+/media/virtual/Windows/ServiceProfiles/LocalService/NTUSER.DAT.LOG1
+/media/virtual/Windows/ServiceProfiles/NetworkService/NTUSER.DAT
+/media/virtual/Windows/ServiceProfiles/NetworkService/NTUSER.DAT.LOG1
+/media/virtual/Windows/setupact.log
+/media/virtual/Windows/SoftwareDistribution/DataStore/DataStore.edb
+/media/virtual/Windows/SoftwareDistribution/DataStore/Logs/edb.chk
+/media/virtual/Windows/SoftwareDistribution/DataStore/Logs/edb.log
+/media/virtual/Windows/System32/7B296FB0-376B-497e-B012-9C450E1B7327-5P-0.C7483456-A289-439d-8115-601632D005A0
+/media/virtual/Windows/System32/7B296FB0-376B-497e-B012-9C450E1B7327-5P-1.C7483456-A289-439d-8115-601632D005A0
+/media/virtual/Windows/System32/catroot2/edb.chk
+/media/virtual/Windows/System32/catroot2/edb.log
+/media/virtual/Windows/System32/catroot2/{127D0A1D-4EF2-11D1-8608-00C04FC295EE}/catdb
+/media/virtual/Windows/System32/catroot2/{F750E6C3-38EE-11D1-85E5-00C04FC295EE}/catdb
+/media/virtual/Windows/System32/config/COMPONENTS
+/media/virtual/Windows/System32/config/COMPONENTS.LOG1
+/media/virtual/Windows/System32/config/DEFAULT
+/media/virtual/Windows/System32/config/DEFAULT.LOG1
+/media/virtual/Windows/System32/config/SAM
+/media/virtual/Windows/System32/config/SAM.LOG1
+/media/virtual/Windows/System32/config/SECURITY
+/media/virtual/Windows/System32/config/SECURITY.LOG1
+/media/virtual/Windows/System32/config/SOFTWARE
+/media/virtual/Windows/System32/config/SOFTWARE.LOG1
+/media/virtual/Windows/System32/config/SYSTEM
+/media/virtual/Windows/System32/config/SYSTEM.LOG1
+/media/virtual/Windows/System32/config/TxR/{016888cc-6c6f-11de-8d1d-001e0bcde3ec}.TxR.1.regtrans-ms
+/media/virtual/Windows/System32/config/TxR/{016888cc-6c6f-11de-8d1d-001e0bcde3ec}.TxR.blf
+/media/virtual/Windows/System32/config/TxR/{016888cd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf
+/media/virtual/Windows/System32/config/TxR/{016888cd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms
+/media/virtual/Windows/System32/DriverStore/FileRepository/usbstor.inf_amd64_neutral_0725c2806a159a9d/usbstor.PNF
+/media/virtual/Windows/System32/LogFiles/AIT/AitEventLog.etl.002
+/media/virtual/Windows/System32/LogFiles/Scm/111d79a0-0ac2-4482-98ba-8dc17a71ab77
+/media/virtual/Windows/System32/LogFiles/Scm/2470470f-2634-478e-b181-571e98a789bb
+/media/virtual/Windows/System32/LogFiles/Scm/4c8b01a2-11ff-4c41-848f-508ef4f00cf7
+/media/virtual/Windows/System32/LogFiles/Scm/5f5a18eb-dc73-4e45-a11c-b59043598412
+/media/virtual/Windows/System32/LogFiles/Scm/7afcc0ca-7121-422a-ab45-b0e8d599ff08
+/media/virtual/Windows/System32/LogFiles/SQM/SQMLogger.etl.007
+/media/virtual/Windows/System32/LogFiles/WMI/RtBackup/EtwRTDiagLog.etl
+/media/virtual/Windows/System32/LogFiles/WMI/RtBackup/EtwRTEventLog-Application.etl
+/media/virtual/Windows/System32/LogFiles/WMI/RtBackup/EtwRTEventLog-System.etl
+/media/virtual/Windows/System32/Msdtc/MSDTC.LOG
+/media/virtual/Windows/System32/Msdtc/Trace/dtctrace.log
+/media/virtual/Windows/System32/perfh009.dat
+/media/virtual/Windows/System32/PerfStringBackup.INI
+/media/virtual/Windows/System32/perfc009.dat
+/media/virtual/Windows/System32/wbem/Repository/INDEX.BTR
+/media/virtual/Windows/System32/wbem/Repository/MAPPING1.MAP
+/media/virtual/Windows/System32/wbem/Repository/MAPPING3.MAP
+/media/virtual/Windows/System32/wbem/Repository/OBJECTS.DATA
+/media/virtual/Windows/System32/wdi/BootPerformanceDiagnostics_SystemData.bin
+/media/virtual/Windows/System32/wdi/LogFiles/BootCKCL.etl
+/media/virtual/Windows/System32/wdi/LogFiles/ShutdownCKCL.etl
+/media/virtual/Windows/System32/wdi/LogFiles/WdiContextLog.etl.002
+/media/virtual/Windows/System32/wdi/ShutdownPerformanceDiagnostics_SystemData.bin
+/media/virtual/Windows/System32/wdi/{86432a0b-3c7d-4ddf-a89c-172faa90485d}/S-1-5-21-4060342460-74397812-2902529664-1000_UserData.bin
+/media/virtual/Windows/System32/wdi/{86432a0b-3c7d-4ddf-a89c-172faa90485d}/{8ecf8e35-046d-4193-9f0a-ec2c686f30c0}/snapshot.etl
+/media/virtual/Windows/System32/wfp/wfpdiag.etl
+/media/virtual/Windows/System32/winevt/Logs/Application.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-TerminalServices-LocalSessionManager%4Operational.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-User Profile Service%4Operational.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-Windows Defender%4WHC.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-Windows Firewall With Advanced Security%4Firewall.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-WindowsUpdateClient%4Operational.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-Bits-Client%4Operational.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-BranchCacheSMB%4Operational.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-Dhcpv6-Client%4Admin.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-Diagnosis-DPS%4Operational.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-Diagnostics-Performance%4Operational.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-GroupPolicy%4Operational.evtx
+/media/virtual/Windows/System32/winevt/Logs/Security.evtx
+/media/virtual/Windows/System32/winevt/Logs/System.evtx
+/media/virtual/Windows/System32/winevt/Logs/ThinPrint Diagnostics.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-Resource-Exhaustion-Detector%4Operational.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-Kernel-WHEA%4Operational.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-Known Folders API Service.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-NetworkProfile%4Operational.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-OfflineFiles%4Operational.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-PrintService%4Admin.evtx
+/media/virtual/Windows/System32/winevt/Logs/Microsoft-Windows-ReadyBoost%4Operational.evtx
+/media/virtual/Windows/Tasks/SCHEDLGU.TXT
+/media/virtual/Windows/WindowsUpdate.log
