@@ -4,7 +4,7 @@
   <title><![CDATA[Category: torproject | blog.encrypted.cc]]></title>
   <link href="http://blog.encrypted.cc/blog/categories/torproject/atom.xml" rel="self"/>
   <link href="http://blog.encrypted.cc/"/>
-  <updated>2013-05-14T10:16:24-04:00</updated>
+  <updated>2013-05-20T13:26:46-04:00</updated>
   <id>http://blog.encrypted.cc/</id>
   <author>
     <name><![CDATA[Runa A. Sandvik]]></name>
@@ -12,6 +12,230 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Forensic Analysis of Tor on Windows]]></title>
+    <link href="http://blog.encrypted.cc/blog/2013/05/20/forensic-analysis-of-tor-on-windows/"/>
+    <updated>2013-05-20T11:49:00-04:00</updated>
+    <id>http://blog.encrypted.cc/blog/2013/05/20/forensic-analysis-of-tor-on-windows</id>
+    <content type="html"><![CDATA[<p>As part of a deliverable for two Tor Project sponsors (<a href="https://trac.torproject.org/projects/tor/wiki/org/sponsors/SponsorJ">Sponsor J</a>, <a href="https://trac.torproject.org/projects/tor/wiki/org/sponsors/SponsorL">Sponsor L</a>), I have been working on a forensic analysis of the Tor Browser Bundle. In this three part series, I will summarize the most interesting or significant traces left behind after using the bundle, deleting it, and then shutting down the computer. Part one <a href="http://blog.encrypted.cc/blog/2013/04/12/forensic-analysis-of-tor-on-linux/">covered</a> Debian Linux (<a href="https://trac.torproject.org/projects/tor/ticket/8166">#8166</a>), this part will cover Windows 7 (<a href="https://trac.torproject.org/projects/tor/ticket/6845">#6845</a>), and part three will cover OS X 10.8 (<a href="https://trac.torproject.org/projects/tor/ticket/6846">#6846</a>).</p>
+
+<h3>Process</h3>
+
+<p>I set up a virtual machine with a fresh install of Windows 7, logged in
+with the default admin account, installed available updates, and shut it
+down cleanly. I connected the virtual drive to another virtual machine,
+used <em>hashdeep</em> to compute hashes for every file on the drive, and then
+<em>rsync</em> to copy all the files over to an external drive.</p>
+
+<p>After having secured a copy of the clean virtual machine, I rebooted the
+system, connected an external drive, and copied the Tor Browser Bundle
+(version 2.3.25-6, 64-bit) from the external drive to the <em>Desktop</em>. I
+extracted the package archive by clicking on the file, then started the
+Tor Browser Bundle by going into the <em>Tor Browser</em> folder and clicking
+on <em>Start Tor Browser.exe</em>.</p>
+
+<p>Once the Tor Browser was up and running, I browsed to a few pages, read
+a few paragraphs here and there, clicked on a few links, and then shut
+it down by closing the Tor Browser and clicking on the <em>Exit</em>-button in
+Vidalia. The Tor Browser did not crash and I did not see any error
+messages. I deleted the Tor Browser folder and the package archive by
+moving the folder and the archive into the <em>Recycle Bin</em>, right-clicking
+on it and choosing <em>Empty Recycle Bin</em>.</p>
+
+<p>I repeated the steps with hashdeep and rsync to create a copy of
+the tainted virtual machine. I also used
+<a href="http://www.thebaskins.com/main/component/content/article/15-work/60-noriben-your-personal-portable-malware-sandbox">Noriben</a>,
+written by Brian Baskin, to create a report of everything the Tor
+Browser Bundle did while it was running.</p>
+
+<h3>Results</h3>
+
+<p>Using hashdeep, I compared the hashes from the tainted virtual machine
+against the hashes from the clean virtual machine: <a href="http://blog.encrypted.cc/files/windows_changed_files.txt">256 files</a>
+have hashes that do not match any of the hashes in the clean set.
+Additionally, the <a href="http://blog.encrypted.cc/files/noriben.txt">Noriben output</a>
+shows the Tor Browser Bundle create, edit, and remove a bunch of files.</p>
+
+<p>I have sorted the most interesting findings into different groups,
+depending on the location, how they were created, and so on.
+Windows 7 has <a href="http://msdn.microsoft.com/en-us/library/3ak841sy.aspx#isolated_storage_locations">built-in symbolic links</a>
+designed for backward compatibility, which is why Noriben and hashdeep
+list the same files in different locations.</p>
+
+<h4>Prefetch</h4>
+
+<p>Windows keeps track of the way the system starts and which programs the
+user commonly opens. This information is saved as a number of small
+files in the prefetch folder:</p>
+
+<ul>
+<li>C:\Windows\Prefetch\START TOR BROWSER.EXE-F5557FAC.pf</li>
+<li>C:\Windows\Prefetch\TBB-FIREFOX.EXE-350502C5.pf</li>
+<li>C:\Windows\Prefetch\TOR-BROWSER-2.3.25-6_EN-US.EX-1354A499.pf</li>
+<li>C:\Windows\Prefetch\TOR.EXE-D7159D93.pf</li>
+<li>C:\Windows\Prefetch\VIDALIA.EXE-5167E0BC.pf</li>
+</ul>
+
+
+<p>The following cache files are most likely similar to prefetch files and
+might contain traces of the Tor Browser Bundle:</p>
+
+<ul>
+<li>C:\Users\runa\AppData\Local\Microsoft\Windows\Caches\cversions.1.db</li>
+<li>C:\Users\runa\AppData\Local\Microsoft\Windows\Caches{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000006.db</li>
+<li>C:\Windows\AppCompat\Programs\RecentFileCache.bcf</li>
+</ul>
+
+
+<p>I have created <a href="https://trac.torproject.org/projects/tor/ticket/8916">#8916</a> for this issue.</p>
+
+<h4>SetupAPI</h4>
+
+<p>SetupAPI and the Plug and Play (PnP) manager write entries to
+<em>SetupAPI.dev.log</em> and <em>SetupAPI.app.log</em> about operations that install
+devices and drivers. The following files contain information about the
+attached external drive:</p>
+
+<ul>
+<li>C:\Windows\inf\setupapi.dev.log</li>
+<li>C:\Windows\System32\DriverStore\FileRepository\usbstor.inf_amd64_ neutral_0725c2806a159a9d\usbstor.PNF</li>
+</ul>
+
+
+<h4>Thumbnail Cache</h4>
+
+<p>Windows stores thumbnails of graphics files, and certain document and
+movie files, in Thumbnail Cache files. The following files contain the
+Onion Logo icon associated with the Tor Browser Bundle:</p>
+
+<ul>
+<li>C:\Users\Runa\AppData\Local\Microsoft\Windows\Explorer\thumbcache_32.db</li>
+<li>C:\Users\Runa\AppData\Local\Microsoft\Windows\Explorer\thumbcache_96.db</li>
+<li>C:\Users\Runa\AppData\Local\Microsoft\Windows\Explorer\thumbcache_256.db</li>
+</ul>
+
+
+<p>Other Thumbnail Cache files, such as <em>thumbcache_1024.db</em>,
+<em>thumbcache_sr.db</em>, <em>thumbcache_idx.db</em>, and <em>IconCache.db</em>, may also
+contain the Onion Logo icon. I have created
+<a href="https://trac.torproject.org/projects/tor/ticket/8921">#8921</a> for this issue.</p>
+
+<h4>Windows Defender</h4>
+
+<p>Windows Defender is the default anti-virus software on Windows 7.
+Windows Defender will write log files to the following location:</p>
+
+<ul>
+<li>C:\ProgramData\Microsoft\Windows Defender\Support\</li>
+</ul>
+
+
+<p>The log files will contain traces of the Tor Browser Bundle if Windows
+Defender ever decides to flag it as malware. This is true for any
+anti-virus software.</p>
+
+<h4>Windows Error Reporting (WER)</h4>
+
+<p>Windows Error Reporting (WER) captures and logs information about
+software crashes and other issues. I found information about the
+attached external drive in the following file:</p>
+
+<ul>
+<li>C:\Users\runa\AppData\Local\Microsoft\Windows\WER\ReportQueue\NonCritical_x64_ 84cd279a5e83221bfa7edcb36665592c1974e4_cab_0b21673a/DMI671B.tmp.log.xml</li>
+</ul>
+
+
+<p>The logs will probably contain traces of the Tor Browser Bundle if any
+part of the bundle, such as the Tor Browser or Vidalia, ever hangs or
+crashes.</p>
+
+<h4>Windows Event Log</h4>
+
+<p>The following two event logs contain information about the attached
+external drive:</p>
+
+<ul>
+<li>C:\Windows\System32\winevt\Logs\Application.evtx</li>
+<li>C:\Windows\System32\winevt\Logs\System.evtx</li>
+</ul>
+
+
+<h4>Windows Paging File</h4>
+
+<p>Microsoft Windows uses a paging file, called <em>pagefile.sys</em>, to store
+frames of memory that do not currently fit into physical memory. The
+file <em>C:\pagefile.sys</em> contains information about the attached external
+drive, as well as the filename for the Tor Browser Bundle executable. I
+have created <a href="https://trac.torproject.org/projects/tor/ticket/8918">#8918</a> for this issue.</p>
+
+<h4>Windows Registry</h4>
+
+<p>The Windows Registry is a databse that stores various configuration
+settings and options for the operating system. <em>HKEY_CURRENT_USER</em>,
+abbreviated <em>HKCU</em>, stores settings that are specific to the currently
+logged-in user. Each user's settings are stored in files called
+<em>NTUSER.DAT</em> and <em>UsrClass.dat</em>.</p>
+
+<p>The path to the Tor Browser Bundle executable is listed in the following
+two files:</p>
+
+<ul>
+<li>C:\Users\runa\AppData\Local\Microsoft\Windows\UsrClass.dat</li>
+<li>C:\Users\runa\AppData\Local\Microsoft\Windows\UsrClass.dat.LOG1</li>
+</ul>
+
+
+<p>I did not find traces of the Tor Browser Bundle in any of the
+<em>NTUSER.DAT</em> files. I have created
+<a href="https://trac.torproject.org/projects/tor/ticket/8919">#8919</a> for
+this issue.</p>
+
+<p>Additionally, the output from Noriben indicates that the Tor Browser
+Bundle touches the registry by creating keys and setting values. The
+following value points to the Tor Browser Bundle executable on the
+attached external drive:</p>
+
+<ul>
+<li>[Set Value] Explorer.EXE:1196 > HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\MuiCache\E:\tor-browser-2.3.25-6_en-US.exe  =  7z SFX</li>
+</ul>
+
+
+<p>The output also makes it look like the Tor Browser Bundle adds the following keys and values:</p>
+
+<ul>
+<li>[Set Value] tbb-firefox.exe:1124 > HKCU\Software\Classes\Local Settings\MuiCache\11\52C64B7E\LanguageList  =  en-US, en</li>
+<li>[CreateKey] tbb-firefox.exe:1124 > HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}</li>
+<li>[CreateKey] tbb-firefox.exe:1124 > HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\Count</li>
+<li>[CreateKey] tbb-firefox.exe:1124 > HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist{F4E57C4B-2036-45F0-A9AB-443BCFE33D9F}</li>
+<li>[CreateKey] tbb-firefox.exe:1124 > HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist{F4E57C4B-2036-45F0-A9AB-443BCFE33D9F}\Count</li>
+</ul>
+
+
+<p>I found that these keys and values are present on a clean Windows 7 system
+where the Tor Browser Bundle has never been used. I also downloaded and tested
+the German version of the Tor Browser Bundle to make sure that the
+<em>LanguageList</em> value does not represent the language of the Tor Browser Bundle.</p>
+
+<h4>Windows Search</h4>
+
+<p>Windows Search, which is enabled by default, builds a full-text index of
+files on the computer. One component of Windows Search is the Indexer,
+which crawls the file system on initial setup, and then listens for file
+system notifications to index changed files. Windows Search writes a number of
+files to the following location:</p>
+
+<ul>
+<li>C:\ProgramData\Microsoft\Search\Data\Applications\Windows\</li>
+</ul>
+
+
+<p>I have not found a way to read the Windows Search database files, but I
+would say it is likely that Windows Search picked up the Tor Browser
+Bundle at some point. I have created
+<a href="https://trac.torproject.org/projects/tor/ticket/8920">#8920</a> for this issue.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What I Did for the Tor Project in April]]></title>
@@ -151,35 +375,6 @@ contain lines such as <em>"Mounted /dev/sdb1 (Read-Write, label "THA", NTFS
 <p>I have previously discussed creating such a document with the <a href="http://www.rorypecktrust.org/">Rory Peck Trust</a>, which is a London based organization that specializes in safety, security and professional development for freelance journalists. I mentioned this again when I met with them the day after the CIJ event, and I'm looking forward to seeing the end result in a few months.</p>
 
 <p>Thanks to the <a href="http://tcij.org/">Centre for Investigative Journalism</a> for hosting the event and inviting me.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[What I did for the Tor Project in February]]></title>
-    <link href="http://blog.encrypted.cc/blog/2013/03/01/what-i-did-for-the-tor-project-in-february/"/>
-    <updated>2013-03-01T08:11:00-05:00</updated>
-    <id>http://blog.encrypted.cc/blog/2013/03/01/what-i-did-for-the-tor-project-in-february</id>
-    <content type="html"><![CDATA[<h3>Top 5 things I did this month</h3>
-
-<ul>
-<li><p>Started working on a forensic analysis of the Tor Browser Bundle, looked at tools such as <a href="http://developer.apple.com/library/mac/#documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/Introduction/Introduction.html">Instruments</a> for OS X, and <a href="http://technet.microsoft.com/en-us/sysinternals/bb896645.aspx">Process Monitor</a>, <a href="https://code.google.com/p/regshot/">Regshot</a>, <a href="http://processhacker.sourceforge.net/">Process Hacker</a>, and <a href="https://www.honeynet.org/node/315">Capture BAT</a> for Windows. I believe I will also have to take differences in drives (solid state drive, hard disk drive, virtual hard disk) into account when doing this analysis. I also added a forensic analysis of the Tor Browser Bundle on Linux <a href="https://trac.torproject.org/projects/tor/ticket/8166">(#8166)</a> to the list.</p></li>
-<li><p>Started working on an improved version of the <a href="https://www.torproject.org/docs/short-user-manual.html.en">short user manual</a> (<a href="https://trac.torproject.org/projects/tor/ticket/5571">#5571</a>, <a href="https://trac.torproject.org/projects/tor/ticket/5811">#5811</a>, <a href="https://trac.torproject.org/projects/tor/ticket/8003">#8003</a>), but figured I would wait until we have decided if we are going to rename obfsproxy/pyobfsproxy to something that is less technical and easier to pronounce.</p></li>
-<li><p>Updated a number of translations of the <a href="https://www.torproject.org/docs/short-user-manual.html.en">short user manual</a> and documented <a href="https://trac.torproject.org/projects/tor/wiki/doc/translation/Introduction">how the translation process works</a>.</p></li>
-<li><p>Hired new translators/support assistants and drafted a welcome email with information about the different systems, accounts, escalation process, and so on. I also put together a document explaining <a href="https://trac.torproject.org/projects/tor/wiki/doc/support/Introduction">how to work with our support system</a>.</p></li>
-<li><p>Resolved 94 tickets in the Tor help desk system (see the <a href="https://lists.torproject.org/pipermail/tor-reports/2013-March/000163.html">tor-reports email</a> for the full summary). Thanks to Moritz, again, for taking care of the help desk while I was traveling.</p></li>
-</ul>
-
-
-<h3>Top 5 things I would like to do next month</h3>
-
-<ul>
-<li><p>Continue with a forensic analysis of the Tor Browser Bundle.</p></li>
-<li><p>Get our new translators/support assistants started with <a href="https://www.transifex.com/projects/p/torproject/">Transifex</a> and <a href="http://www.bestpractical.com/rt/">RT</a>.</p></li>
-<li><p>Decide on a new name for obfsproxy/pyobfsproxy, and update the <a href="https://www.torproject.org/docs/short-user-manual.html.en">short user manual</a> and other documentation.</p></li>
-<li><p>Continue working on an OS X Flash sandbox for the Tor Browser Bundle (<a href="https://trac.torproject.org/projects/tor/ticket/7008">#7008</a>).</p></li>
-<li><p>Travel for conferences, meetings, and other events. In March, I will be in London, Copenhagen, Boston, and Washington DC.</p></li>
-</ul>
-
 ]]></content>
   </entry>
   
