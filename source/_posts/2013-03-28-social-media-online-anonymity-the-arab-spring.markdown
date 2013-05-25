@@ -10,7 +10,7 @@ categories: meta
 blog appears to be gone now, which is why I am re-publishing the post
 here.*
 
-## Social Media and Online Anonymity during the Arab Spring
+### Social Media and Online Anonymity during the Arab Spring
 
 It has been more than a year and a half since demonstrations broke out in central Tunisia at the funeral for Mohamed Bouazizi. Bouazizi, a fruit vendor, set himself on fire in protest of police corruption and ill treatment. The protests sparked by his death spread rapidly throughout Tunisia, and the Arab world soon erupted in revolution. Protests followed in Egypt, Libya, Iran, and Syria, as well as a number of other countries, with strikes, demonstrations, marches and rallies. Social media was also used to organize protests, communicate with other activists, and uncover state attempts at repression and Internet censorship.
 
